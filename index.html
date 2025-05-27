@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info">
+            <h1>Chess Game</h1>
+            <div id="status">White's turn</div>
+            <div class="controls">
+                <button id="new-game">New Game</button>
+                <div class="difficulty">
+                    <label for="difficulty-select">AI Difficulty:</label>
+                    <select id="difficulty-select">
+                        <option value="1">Easy</option>
+                        <option value="2">Hard</option>
+                    </select>
+                </div>
+            </div>
+            <div id="move-history" class="move-history">
+                <h3>Move History</h3>
+                <div id="history-content"></div>
+            </div>
+        </div>
+        <div class="board-container">
+            <div id="board" class="board"></div>
+            <div id="promotion-dialog" class="promotion-dialog hidden">
+                <h3>Promote Pawn to:</h3>
+                <div class="promotion-pieces">
+                    <div class="promotion-piece" data-piece="queen">♕</div>
+                    <div class="promotion-piece" data-piece="rook">♖</div>
+                    <div class="promotion-piece" data-piece="bishop">♗</div>
+                    <div class="promotion-piece" data-piece="knight">♘</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/pieces.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
